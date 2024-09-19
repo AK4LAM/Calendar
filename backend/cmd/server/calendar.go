@@ -3,40 +3,16 @@ package main
 import (
 	"fmt"
 	"time"
+
+	"github.com/AK4LAM/calendar/backend/internal/models"
 )
 
-type TimeStruct struct {
-	year   int
-	month  int
-	day    int
-	hour   int
-	minute int
-}
-
-type Location struct {
-	name     *string
-	postcode *string
-	city     *string
-}
-
-type Event struct {
-	ID       int
-	name     string
-	group    string
-	start    TimeStruct
-	end      TimeStruct
-	location Location
-}
-
-type Deadline struct {
-	ID    int
-	name  string
-	group string
-	time  TimeStruct
-}
-
 func main() {
+	newDeadline := models.Deadline{ID: 0, name: "first deadline", group: 0,
+		models.TimeStruct{}}
+
 	time := time.Now()
 	fmt.Println("calendar")
 	fmt.Println(time)
+	fmt.Println(newDeadline)
 }
