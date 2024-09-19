@@ -8,8 +8,7 @@ import (
 )
 
 func main() {
-	newDeadline := models.Deadline{ID: 0, name: "first deadline", group: 0,
-		models.TimeStruct{}}
+	newDeadline := models.Deadline{ID: 0, Name: "first deadline", Group: "0", Time: models.GetTime()}
 
 	time := time.Now()
 	fmt.Println("calendar")
